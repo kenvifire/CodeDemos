@@ -24,7 +24,9 @@ public class Job implements Runnable {
 	 */
 	@Override
 	public void run() {
-		printQueue.printJob(new Object());
+		for (int i = 0; i < 3; i++) {
+			printQueue.printJob(new Object());
+		}
 	}
 
 }

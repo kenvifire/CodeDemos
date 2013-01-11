@@ -14,7 +14,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 
  */
 public class PrintQueue {
-	private final Lock queueLock = new ReentrantLock();
+	private final Lock queueLock = new ReentrantLock(true);
 
 	public void printJob(Object document) {
 		queueLock.lock();
