@@ -34,6 +34,6 @@ public class DelayMain {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println("Main ends at " + new Date());
+		System.out.println("Main ends at: " + new Date());
 	}
 }
