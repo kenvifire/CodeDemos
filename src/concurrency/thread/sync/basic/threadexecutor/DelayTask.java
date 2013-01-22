@@ -7,13 +7,12 @@
 package concurrency.thread.sync.basic.threadexecutor;
 
 import java.util.Date;
-import java.util.concurrent.Callable;
 
 /**
  * @author kenvi
  * 
  */
-public class DelayTask implements Callable<String> {
+public class DelayTask implements Runnable {
 	private String name;
 
 	public DelayTask(String name) {
@@ -21,15 +20,13 @@ public class DelayTask implements Callable<String> {
 	}
 
 	/*
-	 * (non-Javadoc )
+	 * (non-Javadoc)
 	 * 
-	 * @see java.util.concurrent.Callable#call()
+	 * @see java.lang.Runnable#run()
 	 */
 	@Override
-	public String call() throws Exception {
-
+	public void run() {
 		System.out.println(name + "staring at :" + new Date());
-		return "hello world";
 	}
 
 }
